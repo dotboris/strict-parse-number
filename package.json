@@ -1,0 +1,8 @@
+{
+  "name": "strict-parse-number",
+  "version": "0.0.0",
+  "description": "Parse numbers & integers from strings in a strict way. Base 10, no i18n.",
+  "repository": "https://github.com/dotboris/strict-parse-number",
+  "author": "Boris Bera <bera.boris@gmail.com>",
+  "license": "MIT"
+}
