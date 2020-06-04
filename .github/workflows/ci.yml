@@ -15,7 +15,7 @@ jobs:
           path: ~/.cache/yarn
           key: yarn-v1-${{ runner.OS }}
       - run: yarn
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: node_modules
           path: node_modules
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: node_modules
       - run: yarn lint
@@ -41,11 +41,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: node_modules
       - run: yarn build
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: bundles
           path: dist
