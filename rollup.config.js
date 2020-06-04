@@ -2,15 +2,8 @@ import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import packageManifest from './package.json'
 
-const INPUT = 'src/index.js'
-
-const BABEL_CONFIG = {
-  exclude: ['node_modules/**'],
-  babelHelpers: 'bundled'
-}
-
 export default {
-  input: INPUT,
+  input: 'src/index.js',
 
   output: [
     // CommonJS for node
@@ -40,6 +33,9 @@ export default {
   ],
 
   plugins: [
-    babel(BABEL_CONFIG)
+    babel({
+      exclude: ['node_modules/**'],
+      babelHelpers: 'bundled'
+    })
   ]
 }
