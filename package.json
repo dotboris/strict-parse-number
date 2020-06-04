@@ -4,5 +4,19 @@
   "description": "Parse numbers & integers from strings in a strict way. Base 10, no i18n.",
   "repository": "https://github.com/dotboris/strict-parse-number",
   "author": "Boris Bera <bera.boris@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "dist/strict-parse-number.cjs.js",
+  "module": "dist/strict-parse-number.esm.js",
+  "browser": "dist/strict-parse-number.umd.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "rollup": "^2.13.0",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-babel": "^5.0.2"
+  }
 }
