@@ -12,12 +12,14 @@ export default {
       format: 'cjs',
       sourcemap: true
     },
+
     // ES Module for bundlers
     {
       file: packageManifest.module,
       format: 'es',
       sourcemap: true
     },
+
     // UMD for browsers with a <script> tag
     {
       name: 'StrictParseNumber',
